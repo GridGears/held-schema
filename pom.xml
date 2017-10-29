@@ -93,6 +93,8 @@
                                 <source>src/main/xsd/held/held.xsd</source>
                                 <source>src/main/xsd/held/held2.xsd</source>
                                 <source>src/main/xsd/held/geopriv10.xsd</source>
+                                <source>src/main/xsd/held/pidf.xsd</source>
+                                <source>src/main/xsd/held/GML-pidf-lo-shape.xsd</source>
                             </sources>
                             <packageName>at.gridgears.protocols.held</packageName>
                             <outputDirectory>${project.build.directory}/generated-sources/jaxb2-held</outputDirectory>
