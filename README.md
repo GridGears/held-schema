@@ -1,6 +1,6 @@
-# Http Enabled Location Discovery (HELD) Protocol
+# Http Enabled Location Discovery (HELD) Schema
 
-[![Build Status](https://travis-ci.org/GridGears/held-protocol.svg?branch=master)](https://travis-ci.org/GridGears/held-protocol)
+[![Build Status](https://travis-ci.org/GridGears/held-schema.svg?branch=master)](https://travis-ci.org/GridGears/held-schema)
 
 ## License
 MIT License
