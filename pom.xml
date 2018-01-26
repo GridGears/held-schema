@@ -42,6 +42,10 @@
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
 
     <properties>
@@ -125,7 +129,8 @@
                         </goals>
                         <configuration>
                             <xjbExcludeFilters>
-                                <filter implementation="org.codehaus.mojo.jaxb2.shared.filters.pattern.PatternFileFilter">
+                                <filter
+                                    implementation="org.codehaus.mojo.jaxb2.shared.filters.pattern.PatternFileFilter">
                                     <patterns>
                                         <pattern>bindings.xml</pattern>
                                     </patterns>
@@ -163,6 +168,6 @@
             <artifactId>jaxb2-basics</artifactId>
             <version>0.11.0</version>
         </dependency>
-   </dependencies>
+    </dependencies>
 
 </project>
