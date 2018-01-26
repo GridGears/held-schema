@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="urn:ietf:params:xml:ns:gridgears:aml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:aml="urn:ietf:params:xml:ns:gridgears:aml"
+           elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation>
+            This document defines AML (Advanced Mobile Location) data.
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+
+    <xs:complexType name="amlType">
+        <xs:all>
+            <xs:element name="latitude" type="xs:double"/>
+            <xs:element name="longitude" type="xs:double"/>
+            <xs:element name="radius" type="xs:int"/>
+            <xs:element name="timestamp" type="xs:dateTime"/>
+            <xs:element name="confidenceLevel" type="xs:int"/>
+            <xs:element name="positioningMethod" type="aml:positioningMethodType"/>
+            <xs:element name="imsi" type="aml:numberType"/>
+            <xs:element name="imei" type="aml:numberType"/>
+            <xs:element name="mcc" type="aml:numberType"/>
+            <xs:element name="mnc" type="aml:numberType"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:simpleType name="positioningMethodType" final="restriction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GNSS"/>
+            <xs:enumeration value="WIFI"/>
+            <xs:enumeration value="CELL"/>
+            <xs:enumeration value="NO_LOCATION"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="numberType" final="restriction">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:pattern value="[0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="aml" type="aml:amlType"/>
+</xs:schema>

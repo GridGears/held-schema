@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<aml xmlns="urn:ietf:params:xml:ns:gridgears:aml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="urn:ietf:params:xml:ns:gridgears:aml ../main/xsd/held/aml.xsd">
+
+    <latitude>-34.407</latitude>
+    <longitude>150.88001</longitude>
+    <radius>12</radius>
+    <timestamp>2006-01-10T03:42:28+00:00</timestamp>
+    <confidenceLevel>87</confidenceLevel>
+    <positioningMethod>GNSS</positioningMethod>
+    <imsi>234302543446355</imsi>
+    <imei>356708041746734</imei>
+    <mcc>234</mcc>
+    <mnc>30</mnc>
+</aml>
