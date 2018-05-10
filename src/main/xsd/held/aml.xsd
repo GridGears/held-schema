@@ -27,6 +27,7 @@
 
     <xs:simpleType name="positioningMethodType" final="restriction">
         <xs:restriction base="xs:string">
+            <xs:enumeration value="UNKNOWN"/>
             <xs:enumeration value="GNSS"/>
             <xs:enumeration value="WIFI"/>
             <xs:enumeration value="CELL"/>
