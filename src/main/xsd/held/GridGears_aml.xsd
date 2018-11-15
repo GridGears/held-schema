@@ -15,7 +15,7 @@
         <xs:all>
             <xs:element name="latitude" type="xs:double"/>
             <xs:element name="longitude" type="xs:double"/>
-            <xs:element name="radius" type="xs:int"/>
+            <xs:element name="radius" type="aml:radiusType"/>
             <xs:element name="timestamp" type="xs:dateTime"/>
             <xs:element name="confidenceLevel" type="xs:int"/>
             <xs:element name="positioningMethod" type="aml:positioningMethodType"/>
@@ -40,6 +40,13 @@
         <xs:restriction base="xs:string">
             <xs:minLength value="1"/>
             <xs:pattern value="[0-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="radiusType" final="restriction">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:pattern value="N|([0-9]+)"/>
         </xs:restriction>
     </xs:simpleType>
 
