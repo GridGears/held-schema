@@ -1,12 +1,18 @@
 <?xml version="1.0"?>
 <locationResponse xmlns="urn:ietf:params:xml:ns:geopriv:held"
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xsi:schemaLocation="urn:ietf:params:xml:ns:geopriv:held ../main/xsd/held/held.xsd">
-    <presence xmlns="urn:ietf:params:xml:ns:pidf" entity="pres:3650n87934c@ls.example.com">
+                  xmlns:pidf="urn:ietf:params:xml:ns:pidf"
+                  xmlns:gg="http://schemas.gridgears.io/held"
+                  xsi:schemaLocation="
+                  urn:ietf:params:xml:ns:geopriv:held ../main/xsd/held/held.xsd
+                  http://schemas.gridgears.io/held ../main/xsd/held/GridGears_held_extensions.xsd">
+    <presence xmlns="urn:ietf:params:xml:ns:pidf"
+              xsi:schemaLocation="urn:ietf:params:xml:ns:pidf ../main/xsd/held/pidf.xsd"
+              entity="pres:3650n87934c@ls.example.com">
         <tuple id="b650sf789nd">
             <status>
-                <geopriv xmlns="urn:ietf:params:xml:ns:pidf:geopriv10">
+                <geopriv xmlns="urn:ietf:params:xml:ns:pidf:geopriv10"
+                         xsi:schemaLocation="urn:ietf:params:xml:ns:pidf:geopriv10 ../main/xsd/held/geopriv10.xsd">
                     <location-info>
                         <Point xmlns="http://www.opengis.net/gml" srsName="urn:ogc:def:crs:EPSG::4326">
                             <pos>-34.407 150.88001</pos>
@@ -17,12 +23,11 @@
                         <gbp:retention-expiry>2006-01-11T04:42:28+00:00</gbp:retention-expiry>
                     </usage-rules>
                     <method>GNSS</method>
-                    <aml xmlns="urn:ietf:params:xml:ns:gridgears:aml"
-                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                         xsi:schemaLocation="urn:ietf:params:xml:ns:gridgears:aml ../main/xsd/held/aml.xsd">
+                    <aml xmlns="http://schemas.gridgears.io/aml"
+                         xsi:schemaLocation="http://schemas.gridgears.io/aml ../main/xsd/held/GridGears_aml.xsd">
                         <latitude>-34.407</latitude>
                         <longitude>150.88001</longitude>
-                        <radius>12</radius>
+                        <radius>0</radius>
                         <timestamp>2006-01-10T03:42:28+00:00</timestamp>
                         <confidenceLevel>87</confidenceLevel>
                         <positioningMethod>GNSS</positioningMethod>
@@ -36,4 +41,38 @@
             <timestamp>2006-01-10T03:42:28+00:00</timestamp>
         </tuple>
     </presence>
+    <gg:additionalLocations>
+        <presence xmlns="urn:ietf:params:xml:ns:pidf"
+                  xsi:schemaLocation="urn:ietf:params:xml:ns:pidf ../main/xsd/held/pidf.xsd"
+                  entity="pres:3650n87934c@ls.example.com">
+            <tuple id="b650sf789ef">
+                <status>
+                    <geopriv xmlns="urn:ietf:params:xml:ns:pidf:geopriv10"
+                             xsi:schemaLocation="urn:ietf:params:xml:ns:pidf:geopriv10 ../main/xsd/held/geopriv10.xsd">
+                        <location-info>
+                            <Point xmlns="http://www.opengis.net/gml" srsName="urn:ogc:def:crs:EPSG::4326">
+                                <pos>-34.0 150.0</pos>
+                            </Point>
+                        </location-info>
+                        <usage-rules/>
+                        <method>WIFI</method>
+                        <aml xmlns="http://schemas.gridgears.io/aml"
+                             xsi:schemaLocation="http://schemas.gridgears.io/aml ../main/xsd/held/GridGears_aml.xsd">
+                            <latitude>-34.0</latitude>
+                            <longitude>150.0</longitude>
+                            <radius>0</radius>
+                            <timestamp>2006-01-10T03:40:00+00:00</timestamp>
+                            <confidenceLevel>12</confidenceLevel>
+                            <positioningMethod>WIFI</positioningMethod>
+                            <imsi>234302543446355</imsi>
+                            <imei>356708041746734</imei>
+                            <mcc>234</mcc>
+                            <mnc>30</mnc>
+                        </aml>
+                    </geopriv>
+                </status>
+                <timestamp>2006-01-10T03:42:28+00:00</timestamp>
+            </tuple>
+        </presence>
+    </gg:additionalLocations>
 </locationResponse>

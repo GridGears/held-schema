@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://schemas.gridgears.io/held"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:held="http://schemas.gridgears.io/held"
+           xmlns:pidf="urn:ietf:params:xml:ns:pidf"
+           elementFormDefault="qualified">
+    <xs:annotation>
+        <xs:documentation>
+            This document defines extensions to HELD repsonses.
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xs:import id="pidf" namespace="urn:ietf:params:xml:ns:pidf" schemaLocation="pidf.xsd"/>
+
+    <xs:complexType name="additionalLocationsType">
+        <xs:sequence>
+            <xs:element ref="pidf:presence" xml:space="preserve" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="additionalLocations" type="held:additionalLocationsType"/>
+
+</xs:schema>

@@ -6,7 +6,7 @@
 
     <groupId>at.gridgears.schemas</groupId>
     <artifactId>held</artifactId>
-    <version>1.2.1-SNAPSHOT</version>
+    <version>2.0.0-SNAPSHOT</version>
 
     <name>held-schema</name>
     <description>Schema for Http Enabled Location Discovery (HELD)</description>
@@ -142,7 +142,8 @@
                                 <source>src/main/xsd/held/geopriv10.xsd</source>
                                 <source>src/main/xsd/held/pidf.xsd</source>
                                 <source>src/main/xsd/held/GML-pidf-lo-shape.xsd</source>
-                                <source>src/main/xsd/held/aml.xsd</source>
+                                <source>src/main/xsd/held/GridGears_held_extensions.xsd</source>
+                                <source>src/main/xsd/held/GridGears_aml.xsd</source>
                                 <source>src/main/xsd/held/civic.xsd</source>
                             </sources>
                             <packageName>at.gridgears.schemas.held</packageName>

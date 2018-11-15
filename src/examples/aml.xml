@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<aml xmlns="urn:ietf:params:xml:ns:gridgears:aml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="urn:ietf:params:xml:ns:gridgears:aml ../main/xsd/held/aml.xsd">
+<aml xmlns="http://schemas.gridgears.io/aml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://schemas.gridgears.io/aml ../main/xsd/held/GridGears_aml.xsd">
 
     <latitude>-34.407</latitude>
     <longitude>150.88001</longitude>

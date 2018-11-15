@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="urn:ietf:params:xml:ns:gridgears:aml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:aml="urn:ietf:params:xml:ns:gridgears:aml"
+<xs:schema targetNamespace="http://schemas.gridgears.io/aml"
+           xmlns:aml="http://schemas.gridgears.io/aml"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified">
     <xs:annotation>
         <xs:documentation>
