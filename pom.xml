@@ -6,7 +6,7 @@
 
     <groupId>at.gridgears.schemas</groupId>
     <artifactId>held</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1-SNAPSHOT</version>
 
     <name>held-schema</name>
     <description>Schema for Http Enabled Location Discovery (HELD)</description>
